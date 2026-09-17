@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ColorFlow - HEX RGB HSL Converter</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>ColorFlow</h1>
+
+        <p class="subtitle">
+            HEX / RGB / HSL Color Converter
+        </p>
+
+
+        <!-- Color Preview -->
+
+        <div
+            class="color-preview"
+            id="colorPreview">
+        </div>
+
+
+        <!-- Color Picker -->
+
+        <div class="picker-section">
+
+            <label for="colorPicker">
+                Choose Color
+            </label>
+
+            <input
+                type="color"
+                id="colorPicker"
+                value="#3498DB"
+            >
+
+        </div>
+
+
+        <!-- Conversion Type -->
+
+        <label for="conversionType">
+            Convert From
+        </label>
+
+        <select id="conversionType">
+
+            <option value="hex">
+                HEX
+            </option>
+
+            <option value="rgb">
+                RGB
+            </option>
+
+            <option value="hsl">
+                HSL
+            </option>
+
+        </select>
+
+
+        <!-- Input -->
+
+        <div class="input-section">
+
+            <label id="inputLabel" for="colorInput">
+                HEX Color
+            </label>
+
+            <input
+                type="text"
+                id="colorInput"
+                value="#3498DB"
+                placeholder="#3498DB"
+            >
+
+        </div>
+
+
+        <!-- Buttons -->
+
+        <div class="button-group">
+
+            <button
+                class="convert-btn"
+                onclick="convertColor()">
+                Convert
+            </button>
+
+            <button
+                class="reset-btn"
+                onclick="resetColor()">
+                Reset
+            </button>
+
+        </div>
+
+
+        <!-- Error -->
+
+        <p id="error"></p>
+
+
+        <!-- Results -->
+
+        <div class="results">
+
+            <div class="result-row">
+
+                <strong>HEX:</strong>
+
+                <span id="hexResult">
+                    #3498DB
+                </span>
+
+                <button
+                    onclick="copyValue('hexResult')">
+                    Copy
+                </button>
+
+            </div>
+
+
+            <div class="result-row">
+
+                <strong>RGB:</strong>
+
+                <span id="rgbResult">
+                    52, 152, 219
+                </span>
+
+                <button
+                    onclick="copyValue('rgbResult')">
+                    Copy
+                </button>
+
+            </div>
+
+
+            <div class="result-row">
+
+                <strong>HSL:</strong>
+
+                <span id="hslResult">
+                    204, 70%, 53%
+                </span>
+
+                <button
+                    onclick="copyValue('hslResult')">
+                    Copy
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <p class="footer">
+            ColorFlow • DevOps Student Project
+        </p>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
